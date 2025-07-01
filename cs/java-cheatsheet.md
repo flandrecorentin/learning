@@ -88,10 +88,73 @@ scanner.close();
 # PriorityQueue 
 
 ````java
+// binary heaps
 PriorityQueue<Integer> minHeap = new PriorityQueue<>(); // minimum by default
 minHeap.peek()
 minHeap.poll();
 minHeap.offer(newSweetness);
+
+// can be represented as array using traversal method
+//
+
+// insertion O(logN)
+// deletion O(logN)
+// peek O(1)
+// heapify O(N) 
+
+````
+
+# BFS/DFS recusirve/fifo/lifo
+
+````java
+
+````
+
+# Backtracking
+
+````java
+// return all combinations of size k numbers between 1<=n([1, 2, 10.., n])
+public static void main(String[] args) {
+    List<List<Integer>> ans = new ArrayList<>();
+    backTrack(ans, new ArrayList<>(), 1, n, k);
+    return ans;
+}
+
+public void backTrac(List<List<Integer>> ans, List<Integer> tmp, int start, int n, int k) {
+    if (temp.size()==k) ans.add(new ArrayList<>(temp)); // condition to stop backtrack
+    else {
+        for (int i=start; i<n; i++) { // Cover other possibilities from start
+            tmp.add(i);
+            backTrac(ans, tmp, start+(1), n, k);
+            tmp.remove(i);  
+        }
+    }
+}
+
+````
+
+# Binary search
+
+````java
+public static int binarySearch(int[] array, int target) {
+    int left = 0;
+    int right = array.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        // Check if the target is present at mid
+        if (array[mid] == target) {
+            return mid;
+        }
+        if (array[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    // Target is not present in the array
+    return -1;
+}
 ````
 
 # Java basics / bit manipulation
