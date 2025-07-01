@@ -95,7 +95,8 @@ minHeap.poll();
 minHeap.offer(newSweetness);
 
 // can be represented as array using traversal method
-//
+// children 2i+1 and 2i+2
+// parent (i-1)/2
 
 // insertion O(logN)
 // deletion O(logN)
