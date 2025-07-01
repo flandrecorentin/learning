@@ -122,4 +122,14 @@ switch (day) {
 
 ````java
 logA(X)=logB(X)/logB(A);
+
+// Find all prime number until n (not best best way)
+// O(n*sqrt(n)) // 2,3,5,7
+for (int n = 2; n<N; n++) {
+    boolean isPrime = true;
+    for (int i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) { isPrime = false;}
+    }
+    if (isPrime) primeSet.add(n);
+}
 ````
