@@ -1,3 +1,14 @@
+# Java Main
+
+````java
+class ClassName {
+    public static void main(String[] args)
+    {
+        System.out.println("Main method");
+    }
+}
+````
+
 # Java List
 
 ````java
