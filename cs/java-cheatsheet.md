@@ -21,6 +21,10 @@ list.set(index, replaceElement));
 List<Integer> list  = Arrays.stream(res)
                              .boxed() // wrapper int => Integer
                              .collect(Collectors.toList());
+// Transform a List<Integer> to a int[] quickly
+int[] array = list.stream()
+        .mapToInt(Integer::intValue)  // unbox Integer => int
+        .toArray();
 ````
 
 # Java String
@@ -33,6 +37,19 @@ String str = new String(charArray);
 char[] charArray = str.toCharArray();
 Character.isUpperCase(c);
 Character.isLowerCase(c);
+
+StringBuilder sb = new StringBuilder("OptionalFirst");
+sb.append("SecondItem");
+sb.insert(13, ". and ");
+sb.delete(13, 14);
+sb.reverse();
+System.out.println(sb.toString());
+
+// Sort a string effictively
+char[] strCharArray = str.toCharArray();
+Arrays.sort(strCharArray);
+String strSorted = new String(strCharArray);
+
 ````
 
 # Java Map
@@ -41,7 +58,7 @@ Character.isLowerCase(c);
 
 containsKey(key)
 containsValue(value)
-values()
+values() // Return the values Collection<V>
 entrySet()
 values() // return Set<Map<K,V>> // for (entrySet : map.entrySet()) getKey(), getValue
 put(key, value)
@@ -73,6 +90,9 @@ Queue<Integer> fifo = new LinkedList<>(); // offer poll peek
 ````java
 int i = Integer.parseInt(str);
 String str = Integer.toString(number);
+
+Long wrappedLong = 2L;
+wrappedLong.intValue();
 ````
 
 # Java Arrays
@@ -80,7 +100,13 @@ String str = Integer.toString(number);
 `````java
 int[] numbers
 Arrays.fill(numbers, val);
-Arrays.sort(numbers)
+Arrays.sort(numbers);
+
+List<List<String>> expected = Arrays.asList(
+        Arrays.asList("bat"),
+        Arrays.asList("nat", "tan"),
+        Arrays.asList("ate", "eat", "tea")
+);
 `````
 
 # Java read from input standard
