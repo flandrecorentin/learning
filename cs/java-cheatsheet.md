@@ -145,7 +145,25 @@ minHeap.offer(newSweetness);
 # BFS/DFS recusirve/fifo/lifo
 
 ````java
+// Example implementation for BFS with queue (non recursive)
+List<List<Integer>> adjList = new ArrayList<>(); 
 
+int[] score = new int[n]; // fill with MAX_VALUE 
+
+Queue<Integer> queue = LinkedList<>(); 
+queue.add(/* first node*/); 
+
+while(!queue.isEmpty()) { 
+    Integer node = queue.poll(); 
+    for (Integer adj : adjList.get(node-1)) { 
+        if (score[adj -1] == MAX) /* Not visited yet*/ { 
+                queue.offer(adj -1); 
+        } 
+        // Update best score
+        score[adj -1] = Math.min(score[adj-1], score[node-1] +value); 
+    } 
+}
+return ____;
 ````
 
 # Backtracking
