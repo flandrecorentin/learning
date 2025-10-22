@@ -161,6 +161,13 @@ if __name__ == "__main__":
     main()
 ````
 
+# std
+
+````python
+line = input().strip()               # read line by line string
+line_array = input().strip().split() # []
+````
+
 # Date/Time / request
 
 ````python
