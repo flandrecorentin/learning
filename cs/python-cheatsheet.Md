@@ -153,6 +153,12 @@ class BankAccount:
         if value < 0:
             raise ValueError("Balance cannot be negative")
         self._balance = value
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
 ````
 
 # Date/Time / request
