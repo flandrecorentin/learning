@@ -67,9 +67,17 @@ from collections import deque, defaultdict, Counter
 
 # Deque (double-ended queue)
 queue = deque()
-queue.append("first")   # Add to right
-queue.popleft()         # Remove from left
-queue[0]                # Peek left
+queue.append("first")   # Push / Add to right
+queue.popleft()         # Pop / Remove from left
+queue[0]                # Peek / Check left
+len(queue) == 0         # isEmpty 
+
+# We can manage stack with []
+stack = []
+stack.append("first")    # Push / Add to right
+stack.pop()              # Pop / Remove from right
+stack[-1]                # Peek / Check right
+len(stack) == 0          # isEmpty
 
 # DefaultDict
 dd = defaultdict(int)   # Default value for missing keys
