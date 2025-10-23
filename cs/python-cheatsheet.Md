@@ -38,8 +38,8 @@ for key, value in person.items(): # Iterate
 # Set
 
 ````python
+empty_set = set()
 set_a = {1, 2, 3, 4}
-set_b = {3, 4, 5, 6}
 set_a.add(7)            # Add element
 set_a.remove(3)         # Remove (raises KeyError if missing)
 set_a.discard(3)        # Remove (no error if missing)
