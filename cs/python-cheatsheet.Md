@@ -35,18 +35,6 @@ for key, value in person.items(): # Iterate
 
 ````
 
-# Set
-
-````python
-empty_set = set()
-set_a = {1, 2, 3, 4}
-set_a.add(7)            # Add element
-set_a.remove(3)         # Remove (raises KeyError if missing)
-set_a.discard(3)        # Remove (no error if missing)
-set_a.union(set_b)      # Union
-set_a & set_b           # Intersection
-set_a - set_b           # Difference
-````
 
 # String
 
@@ -58,6 +46,20 @@ joined = "--".join(split)       # Join with delimiter
 new_text = clean_text.replace("world", "python") # Replace
 sub_text = new_text[:3] + "--" + new_text[7:]    # Slice + concat
 chartoint = ord(text[0]) - ord('a')
+````
+
+
+# Set
+
+````python
+empty_set = set()
+set_a = {1, 2, 3, 4}
+set_a.add(7)            # Add element
+set_a.remove(3)         # Remove (raises KeyError if missing)
+set_a.discard(3)        # Remove (no error if missing)
+set_a.union(set_b)      # Union
+set_a & set_b           # Intersection
+set_a - set_b           # Difference
 ````
 
 # Collections
