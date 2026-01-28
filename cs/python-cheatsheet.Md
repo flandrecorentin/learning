@@ -45,6 +45,7 @@ for key, val in maps.items()
 
 ````python
 text = "  hello, world!  "
+sorted_text = ''.join(sorted(text))
 clean_text = text.strip()       # Remove whitespace
 split = clean_text.split(", ")  # Split into list
 joined = "--".join(split)       # Join with delimiter
