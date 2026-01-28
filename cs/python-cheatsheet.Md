@@ -7,6 +7,7 @@ lst.extend([911, 1213]) # Extend with iterable
 lst.sort()              # In-place sort
 sorted_lst = sorted(lst) # New sorted list
 lst.pop(2)              # Remove by index
+lst.remove(valToRemove) # Remove by value (raise ValueError)
 sublist = lst[1:-1]     # Slice [start:end:step]
 reversed_lst = lst[::-1] # Reverse
 squares = [x**2 for x in lst if x % 2 == 0] # List comprehension
@@ -33,6 +34,10 @@ person.pop("city")      # Remove key
 for key, value in person.items(): # Iterate
     print(key, value)
 
+if key in maps:
+for key in maps.keys()
+for val in maps.values()
+for key, val in maps.items()
 ````
 
 
@@ -87,6 +92,58 @@ dd["key"] += 1
 
 # Counter
 counts = Counter("hello") # {'h':1, 'e':1, 'l':2, 'o':1}
+````
+
+# Graph
+
+````python
+
+
+# topological order
+````
+
+# Heaps
+
+````python
+import heapq
+
+min_heap = [2, 3]
+
+heapq.heapify(my_list)
+heappush(min_heap, val)
+smallest = heapq.heappop(min_heap)
+smallest_three = heapq.nsmallest(3, min_heap)
+````
+
+
+
+# Binary search
+
+````python
+import bisect
+index = bisect.bisect_left(arr, target) # Returns insertion point (index)
+````
+
+# Backtracking
+
+````python
+def backtrack(n: int, k: int, answers: List[List[int]], start, current_combinaison: List[int]) -> List[List[int]]:
+    # Base case: if the current combination has size k, add it to the result
+    if len(current_combination) == k: # condition to stop backtrack
+        ans.append(current_combination.copy())
+        return
+
+    # Iterate through possible candidates
+    for i in range(start, n + 1):
+        current_combination.append(i)
+        backtrack(n, k, answers, i + 1, current_combination)
+        current_combination.pop()
+
+# Example usage
+answers = []
+print(backtrack(n=4, k=2, answers=answer, start=1, current_combination=[]))
+# Output: [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+
 ````
 
 # File/Error handling
